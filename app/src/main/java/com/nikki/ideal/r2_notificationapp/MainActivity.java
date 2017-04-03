@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                 .addAction(R.drawable.notification_icon, "And more", pIntent).build();
         NotificationManager notificationManager =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
+                n.flags |=Notification.FLAG_AUTO_CANCEL;
         notificationManager.notify(0, n);
     }
 
